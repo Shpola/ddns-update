@@ -1,3 +1,9 @@
+#if defined(_WIN32) && !defined(WIN32)
+#define WIN32
+#endif
+#pragma comment(lib, "WS2_32.lib") /* program use socket library */
+#define _CRT_SECURE_NO_DEPRECATE
+
 
 #include <stdio.h>
 #include <curl/curl.h>
